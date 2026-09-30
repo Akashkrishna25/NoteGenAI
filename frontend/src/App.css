@@ -1,0 +1,911 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  background: #f6f7fb;
+
+  color: #171923;
+
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+  min-height: 100vh;
+
+  background: #f6f7fb;
+
+  color: #171923;
+
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  background: white;
+
+  border-bottom: 1px solid #e8e8ee;
+
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+
+/* RIGHT SIDE */
+
+.nav-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* AI STATUS */
+
+.nav-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 14px;
+
+  color: #555;
+}
+
+.status-dot {
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-toggle {
+  border: 1px solid #dddde5;
+
+  background: white;
+
+  color: #333;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  width: min(900px, 92%);
+
+  margin: auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  text-align: center;
+
+  padding: 65px 20px 40px;
+}
+
+
+/* BADGE */
+
+.badge {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: #eeeaff;
+
+  color: #6447d9;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+
+/* TITLE */
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 6vw, 60px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #6941c6;
+}
+
+
+/* DESCRIPTION */
+
+.hero p {
+  max-width: 600px;
+
+  margin: 20px auto 0;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  color: #686b78;
+}
+
+
+/* =========================================
+   GENERATOR CARD
+========================================= */
+
+.generator-card {
+  background: white;
+
+  border: 1px solid #e5e5eb;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(20, 20, 40, 0.06);
+
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+
+
+/* TITLE */
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: 24px;
+}
+
+.section-title p {
+  margin: 6px 0 25px;
+
+  color: #777;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  flex: 1;
+}
+
+.input-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #444;
+}
+
+
+textarea,
+select {
+  width: 100%;
+
+  border: 1px solid #dcdce5;
+
+  border-radius: 12px;
+
+  padding: 13px 14px;
+
+  font-size: 15px;
+
+  background: #fafafd;
+
+  color: #222;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+
+textarea {
+  resize: vertical;
+
+  min-height: 100px;
+}
+
+
+textarea:focus,
+select:focus {
+  border-color: #6941c6;
+
+  box-shadow:
+    0 0 0 3px rgba(105, 65, 198, 0.1);
+}
+
+
+/* =========================================
+   EXAMPLES
+========================================= */
+
+.examples {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 13px;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+
+.example-btn {
+  border: 1px solid #dedee7;
+
+  background: white;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  color: #555;
+
+  transition: 0.2s;
+}
+
+
+.example-btn:hover {
+  border-color: #6941c6;
+
+  color: #6941c6;
+
+  background: #f7f4ff;
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.options {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+  margin-top: 18px;
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  background: #fff1f1;
+
+  color: #c62828;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   GENERATE BUTTON
+========================================= */
+
+.generate-btn {
+  width: 100%;
+
+  margin-top: 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  background: #6941c6;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+
+
+.generate-btn:hover {
+  background: #5833ad;
+
+  transform: translateY(-1px);
+}
+
+
+.generate-btn:disabled {
+  opacity: 0.7;
+
+  cursor: wait;
+
+  transform: none;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.spinner {
+  display: inline-block;
+
+  width: 17px;
+
+  height: 17px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  margin-right: 8px;
+
+  vertical-align: -3px;
+
+  animation: spin 0.7s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   SHORTCUT
+========================================= */
+
+.shortcut {
+  text-align: center;
+
+  margin-top: 12px;
+
+  font-size: 12px;
+
+  color: #888;
+}
+
+
+/* =========================================
+   NOTES CARD
+========================================= */
+
+.notes-card {
+  margin-top: 30px;
+
+  background: white;
+
+  border: 1px solid #e5e5eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(20, 20, 40, 0.05);
+
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+
+
+/* =========================================
+   NOTES HEADER
+========================================= */
+
+.notes-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  border-bottom: 1px solid #eeeeef;
+}
+
+
+.notes-label {
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #6941c6;
+}
+
+
+.notes-header h2 {
+  margin: 6px 0 3px;
+
+  font-size: 25px;
+}
+
+
+.notes-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   NOTE ACTIONS
+========================================= */
+
+.notes-actions {
+  display: flex;
+
+  gap: 8px;
+
+  align-items: flex-start;
+}
+
+
+.notes-actions button {
+  border: 1px solid #dddde5;
+
+  background: white;
+
+  color: #333;
+
+  border-radius: 9px;
+
+  padding: 8px 11px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+
+.notes-actions button:hover {
+  background: #f6f3ff;
+
+  border-color: #6941c6;
+}
+
+
+/* =========================================
+   NOTES CONTENT
+========================================= */
+
+.notes-content {
+  padding: 30px;
+
+  white-space: pre-wrap;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+
+  color: #30313a;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   NOTES FOOTER
+========================================= */
+
+.notes-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  padding: 14px 25px;
+
+  background: #fafafd;
+
+  border-top: 1px solid #eeeeef;
+
+  font-size: 12px;
+
+  color: #777;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.app.dark {
+  background: #0f1117;
+
+  color: #f1f1f5;
+}
+
+
+/* NAVBAR */
+
+.app.dark .navbar {
+  background: #171923;
+
+  border-color: #292c38;
+}
+
+
+.app.dark .nav-status {
+  color: #aaa;
+}
+
+
+/* THEME BUTTON */
+
+.app.dark .theme-toggle {
+  background: #242733;
+
+  color: #f1f1f5;
+
+  border-color: #383c4b;
+}
+
+
+/* HERO */
+
+.app.dark .hero p {
+  color: #a6a8b3;
+}
+
+
+/* GENERATOR */
+
+.app.dark .generator-card {
+  background: #171923;
+
+  border-color: #292c38;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.app.dark .section-title p {
+  color: #999ca8;
+}
+
+
+.app.dark .input-group label {
+  color: #d4d5dc;
+}
+
+
+/* INPUT */
+
+.app.dark textarea,
+.app.dark select {
+  background: #20232d;
+
+  color: #f1f1f5;
+
+  border-color: #363a48;
+}
+
+
+.app.dark textarea::placeholder {
+  color: #777b88;
+}
+
+
+/* EXAMPLES */
+
+.app.dark .examples {
+  color: #999ca8;
+}
+
+
+.app.dark .example-btn {
+  background: #20232d;
+
+  color: #c5c7d0;
+
+  border-color: #363a48;
+}
+
+
+.app.dark .example-btn:hover {
+  background: #292342;
+
+  border-color: #6941c6;
+
+  color: #bca8ff;
+}
+
+
+/* ERROR */
+
+.app.dark .error {
+  background: #321d20;
+
+  color: #ff9b9b;
+}
+
+
+/* NOTES */
+
+.app.dark .notes-card {
+  background: #171923;
+
+  border-color: #292c38;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.app.dark .notes-header {
+  border-color: #292c38;
+}
+
+
+.app.dark .notes-header p {
+  color: #999ca8;
+}
+
+
+/* NOTE BUTTONS */
+
+.app.dark .notes-actions button {
+  background: #20232d;
+
+  color: #ddd;
+
+  border-color: #363a48;
+}
+
+
+.app.dark .notes-actions button:hover {
+  background: #292342;
+
+  border-color: #6941c6;
+}
+
+
+/* NOTE CONTENT */
+
+.app.dark .notes-content {
+  color: #d9dae0;
+}
+
+
+/* NOTE FOOTER */
+
+.app.dark .notes-footer {
+  background: #13151c;
+
+  border-color: #292c38;
+
+  color: #858896;
+}
+
+
+/* FOOTER */
+
+.app.dark footer {
+  color: #777b88;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-status {
+    display: none;
+  }
+
+  main {
+    width: 94%;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .generator-card {
+    padding: 20px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .notes-header {
+    flex-direction: column;
+  }
+
+  .notes-actions {
+    flex-wrap: wrap;
+  }
+
+  .notes-content {
+    padding: 20px;
+
+    font-size: 15px;
+  }
+
+  .theme-toggle {
+    padding: 7px 10px;
+  }
+}

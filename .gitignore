@@ -1,0 +1,52 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+
+
+
+### Also add a `.gitignore`
+
+Create this file in the **root** of `NoteGen-AI`:
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated training files
+data/processed/*.pt
+
+# Python build
+build/
+dist/
+*.egg-info/
